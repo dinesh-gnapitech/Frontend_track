@@ -1,7 +1,7 @@
 
 # Concepts Used in 7-Day Weather Forecast Application
 
-## 📄 HTML (index.html)
+##  HTML (index.html)
 - **Doctype Declaration**: `<!DOCTYPE html>` declares HTML5 standard.
 - **Meta Tags**:
   - `charset="UTF-8"` for character encoding.
@@ -16,7 +16,7 @@
   - `search-bar` div for input and button.
   - `weather-container` for dynamic weather forecast output.
 
-## 🎨 CSS (styles.css)
+##  CSS (styles.css)
 - **Global Styling**:
   - `body` styling with font, padding, background, and text alignment.
 - **Flexbox**:
@@ -33,25 +33,25 @@
 - **Image Sizing**:
   - Weather icons set to fixed width and height.
 
-## 🧠 JavaScript (script.js)
+##  JavaScript (script.js)
 
-### 🔑 API Integration
+###  API Integration
 - Uses **WeatherAPI** for fetching 7-day forecasts.
 - `API_KEY` is hardcoded (should be stored securely in production).
 
-### 📥 Input Handling
+###  Input Handling
 - `searchCity()`:
   - Reads city name from input.
   - Calls `getWeather(city)` if input is valid.
 
-### 🌐 Fetching Weather
+###  Fetching Weather
 - `getWeather(city)`:
   - Constructs API URL using template literals.
   - Displays "Loading..." message.
   - Handles success and failure responses.
   - On success, calls `displayForecast()`.
 
-### 📊 Displaying Forecast
+###  Displaying Forecast
 - `displayForecast()`:
   - Clears previous results.
   - Creates a heading for city and country.
@@ -60,25 +60,14 @@
     - Rows: One for each forecast day.
   - Parses date using `Date` and `toLocaleDateString()`.
 
-### 🧪 Error Handling
+###  Error Handling
 - Network/API errors caught using `try...catch`.
 - `data.error` check for API-level issues.
 - Fallback message for unrecognized city.
 
-### 🛠 DOM Manipulation
+###  DOM Manipulation
 - `document.createElement()`, `textContent`, `appendChild()` to build UI.
 - Dynamic elements created based on API response.
 
-### 🚀 Auto Load
+###  Auto Load
 - `window.onload`: Automatically loads Bengaluru's forecast on page load.
-
-## 🧩 Best Practices Observed
-- Separation of concerns (HTML for structure, CSS for style, JS for logic).
-- Clean, modular code.
-- Graceful error handling.
-- Semantic and accessible HTML elements.
-
-## ✅ Optional Enhancements (Supported by Styles)
-- Weather cards UI (instead of table).
-- Animated borders.
-- Flexbox-based responsive layout.
