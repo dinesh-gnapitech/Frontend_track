@@ -59,7 +59,7 @@
     - Headers: Date, Icon, Condition, Temperature.
     - Rows: One for each forecast day.
   - Parses date using `Date` and `toLocaleDateString()`.
-
+  
 ###  Error Handling
 - Network/API errors caught using `try...catch`.
 - `data.error` check for API-level issues.

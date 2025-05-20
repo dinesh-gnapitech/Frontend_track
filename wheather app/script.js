@@ -31,7 +31,7 @@ async function getWeather(city) {
   container.innerHTML = '<p>Loading...</p>'; // Show loading message
 
   try {
-    const res = await fetch(url); // Fetch weather data from API
+    const res = await fetch(url); // Fetch weather data from API. 
     const data = await res.json(); // Parse the JSON response
 
     // If API returns an error (e.g., city not found), display "City not found"
@@ -102,22 +102,22 @@ function displayForecast(forecastDays, cityName, country) { // Function to displ
     const dateObj = new Date(apiDate + 'T00:00:00');
 
     // Format the date as "Mon, 20 May 2025"
-    const weekday = dateObj.toLocaleDateString(undefined, { weekday: 'short' }); // Short weekday name (e.g., "Mon")
-    const dayOfMonth = dateObj.toLocaleDateString(undefined, { day: 'numeric' }); // Day of the month (e.g., "20")
+    const weekday = dateObj.toLocaleDateString(undefined, { weekday: 'short' }); // Short weekday name (e.g., "Mon"). ToLocaleDateString formats the date according to the user's locale
+    const dayOfMonth = dateObj.toLocaleDateString(undefined, { day: 'numeric' }); // Day of the month (e.g., "20").
     const month = dateObj.toLocaleDateString(undefined, { month: 'short' }); // Short month name (e.g., "May")
     const year = dateObj.toLocaleDateString(undefined, { year: 'numeric' }); // Full year (e.g., "2025")
     const formattedDate = `${weekday}, ${dayOfMonth} ${month} ${year}`; // Combine to form the final date string
 
     // Extract weather icon URL, condition text, and average temperature
-    const iconUrl = day.day.condition.icon; // Weather icon (URL) 
-    const condition = day.day.condition.text; // Weather description (e.g., "Sunny")
-    const temp = `${day.day.avgtemp_c}°C`; // Average temperature in Celsius
+    const iconUrl = day.day.condition.icon; // Weather icon (URL). day.day.condition.icon is the URL of the weather icon image
+    const condition = day.day.condition.text; // Weather description (e.g., "Sunny"). day.day.condition.text is the text description of the weather condition
+    const temp = `${day.day.avgtemp_c}°C`; // Average temperature in Celsius. avgtemp_c is the average temperature in Celsius. You can also use avgtemp_f for Fahrenheit
 
     // Create a new table row for this day's forecast
     const row = document.createElement('tr'); 
 
     // Date cell
-    const dateCell = document.createElement('td');
+    const dateCell = document.createElement('td'); // Create a table cell for the date
     dateCell.textContent = formattedDate; // Show formatted date
     row.appendChild(dateCell);
 
@@ -126,21 +126,21 @@ function displayForecast(forecastDays, cityName, country) { // Function to displ
     const img = document.createElement('img'); // Create an image element
     img.src = iconUrl; // Set image source to icon URL (src attribute of the image means the URL of the image)
     img.alt = condition; // Set alt text for accessibility (accessibility means providing a text alternative for non-text content)
-    iconCell.appendChild(img);
-    row.appendChild(iconCell);
+    iconCell.appendChild(img); // Append the image to the cell
+    row.appendChild(iconCell); 
 
     // Condition cell (text description)
-    const conditionCell = document.createElement('td');
-    conditionCell.textContent = condition;
-    row.appendChild(conditionCell);
+    const conditionCell = document.createElement('td'); 
+    conditionCell.textContent = condition; // Show weather condition text
+    row.appendChild(conditionCell); // appendChild is used to add the cell to the row
 
     // Temperature cell (average temp)
-    const tempCell = document.createElement('td');
+    const tempCell = document.createElement('td'); 
     tempCell.textContent = temp;
     row.appendChild(tempCell);
 
     // Add the row to the table body
-    tbody.appendChild(row);
+    tbody.appendChild(row); // Append the row to the table body
   });
 
   // Add the table body to the table and the table to the container
