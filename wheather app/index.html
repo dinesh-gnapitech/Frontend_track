@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Sets the character encoding for the document to UTF-8, supporting most characters -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- Ensures the page is responsive and scales correctly on all devices -->
+  <title>7-Day Weather Forecast</title>
+  <!-- Sets the title of the page shown in the browser tab -->
+  <link rel="stylesheet" href="styles.css"/>
+  <!-- Links to an external CSS file for styling the page -->
+</head>
+<body>
+  <h1>7-Day Weather Forecast</h1>
+  <!-- Main heading for the application -->
+
+  <div class="search-bar">
+    <!-- Container for the search input and button -->
+    <input type="text" id="city-input" placeholder="Enter city name" />
+    <!-- Text input where the user types the city name.
+         The 'id' is used to access this element in JavaScript.
+         The placeholder provides a hint to the user. -->
+    <button onclick="searchCity()">Search</button>
+    <!-- Button to trigger the search.
+         When clicked, it calls the searchCity() function defined in script.js -->
+  </div>
+
+  <div class="weather-container" id="weather-container"></div>
+  <!-- This div will be dynamically filled with weather data (forecast table, errors, etc.)
+       The 'id' allows JavaScript to easily select and update this element. -->
+
+  <script src="script.js"></script>
+  <!-- Includes the JavaScript file that contains all the logic for fetching and displaying weather data -->
+</body>
+</html>
