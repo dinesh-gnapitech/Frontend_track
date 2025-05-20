@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Employee Asset Info Form</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container"> <!-- Container for the form -->
+    <h2>Employee Asset Information</h2> <!-- Form title -->
+    <form id="assetForm"> <!-- Form element -->
+      <div class="form-row"> <!-- Row for employee name -->
+        <label for="empName">Employee Name:</label> <!-- Label for employee name -->
+        <input type="text" id="empName" required /> <!-- Input field for employee name -->
+      </div>
+      <div class="form-row"> <!-- Row for employee ID -->
+        <label for="empId">Employee ID:</label> <!-- Label for employee ID -->
+        <input type="text" id="empId" required /> <!-- Input field for employee ID -->
+      </div>
+      <div class="form-row"> <!-- Row for department -->
+        <label for="department">Department:</label> <!-- Label for department -->
+        <input type="text" id="department" required /> <!-- Input field for department -->
+      </div>
+      <div class="form-row"> <!-- Row for asset name -->
+        <label for="assetName">Asset Name:</label> <!-- Label for asset name -->
+        <input type="text" id="assetName" required /> <!-- Input field for asset name -->
+      </div>
+      <div class="form-row"> <!-- Row for asset type -->
+        <label for="assetId">Asset ID:</label> <!-- Label for asset ID -->
+        <input type="text" id="assetId" required /> <!-- Input field for asset ID -->
+      </div>
+      <div class="form-row"> <!-- Row for asset type -->
+        <label for="assetType">Asset Type:</label> <!-- Label for asset type -->
+        <input type="text" id="assetType" required /> <!-- Input field for asset type -->
+      </div>
+      <div class="form-row"> <!-- Row for issue date -->
+        <label for="issueDate">Issue Date:</label> <!-- Label for issue date -->
+        <input type="date" id="issueDate" required /> <!-- Input field for issue date --> 
+      </div>
+      <div class="form-row"> <!-- Row for remarks -->
+        <label for="remarks">Remarks:</label> <!-- Label for remarks -->
+        <textarea id="remarks" rows="3"></textarea> <!-- Textarea for remarks -->
+      </div>
+      <div class="form-row"> <!-- Row for submit button -->
+        <button type="submit">Submit</button> <!-- Submit button -->
+      </div>
+    </form>
+  </div>
+  <script src="script.js"></script> <!-- Link to external JavaScript file -->
+</body>
+</html>

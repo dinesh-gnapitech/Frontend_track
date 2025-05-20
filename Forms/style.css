@@ -1,0 +1,53 @@
+body {
+  font-family: Arial, sans-serif; /* Sets the font for the entire page */
+  background-color: #f2f2f2; /* Light gray background color */
+  margin: 0; /* Removes default margin */
+  padding: 20px; /* Adds space around the content */
+}
+
+/* container for the form */ 
+.container {
+  max-width: 500px; /* Sets a maximum width for the form container */
+  background-color: #fff; /* White background for the form container */
+  margin: auto; /* Centers the container on the page */
+  padding: 25px; /* Adds space inside the container */
+  border-radius: 10px; /* Rounds the corners of the container */
+  box-shadow: 0 0 15px rgba(0,0,0,0.1); /* Adds a subtle shadow around the container */
+}
+/* h2 header */
+h2 {
+  text-align: center;  /* Centers the heading text */
+  margin-bottom: 20px; /* Adds space below the heading */
+}
+
+.form-row { 
+  display: flex; /* Uses flexbox for layout */
+  flex-direction: column; /* Arranges child elements in a column */
+  margin-bottom: 15px; /* Adds space below each form row */
+}
+
+.form-row label {
+  margin-bottom: 5px;  /* Adds space below the label */
+  font-weight: bold; /* Makes the label text bold */
+}
+
+.form-row input,  
+.form-row textarea,
+.form-row button {
+  padding: 10px; /* Adds space inside the input/textarea/button */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 5px; /* Rounds the corners */
+}
+
+button {
+  background-color: #2e86de; /* Blue background color */
+  color: white; /* White text color */
+  font-size: 16px; /* Sets the size of the button text */
+  cursor: pointer; /* Changes the mouse cursor to a pointer when hovering over the button */
+  border: none; /* Removes the default border of the button */
+  transition: background 0.3s ease; /* Adds a smooth transition effect for background color change */
+}
+
+button:hover {  
+  background-color: #1e70c2; /* Darker blue on hover */
+}
